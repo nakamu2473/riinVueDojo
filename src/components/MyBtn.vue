@@ -10,46 +10,28 @@ export default {
       type: String,
     }
   },
-  data() {
-    let btnStyle = {}
+  computed: {
+    btnStyle: function () {
     if(this.theme ==="primary"){
-      btnStyle = {
+      return {
         backgroundColor: "green",
         fontWeight: "bold",
       }
     }else if(this.theme ==="danger"){
-      console.log(this.theme)
-      btnStyle = {
+      return {
         backgroundColor: "red",
         fontWeight: "bold",
       }
+    }else {
+      return {}
     }
-    return {
-      btnStyle: btnStyle
     }
-  },
-  methods: {
-    // getStyle() {
-    // if(this.theme ==="primary"){
-    //   return {
-    //     backgroundColor: "green",
-    //     fontWeight: "bold",
-    //   }
-    // }else if(this.theme ==="danger"){
-    //   return {
-    //     backgroundColor: "red",
-    //     fontWeight: "bold",
-    //   }
-    // }else {
-    //   return {}
-    // }
-    // }
   }
 }
 </script>
 
 <template>
-  <button :style=this.btnStyle>{{txt}}</button>
+  <button :style=btnStyle>{{txt}}</button>
 </template>
 
 <style>
