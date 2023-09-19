@@ -1,12 +1,27 @@
 <script>
-import MyBtn from '../components/MyBtn.vue'
+import SharedCounter from '../components/SharedCounter.vue'
 export default {
-  components: {
-    MyBtn
+  data() {
+    return {
+        count: 0
+    }
   },
+  components: {
+    SharedCounter
+  },
+  methods:{
+    btnIncrement () {
+      return this.count++
+    }
+  }
 }
 </script>
 <template>
     <div> home </div>
-    <MyBtn txt="ボタンンンン" theme="danger" />
+    <SharedCounter  :count="this.count" />
+    <button @click="btnIncrement">←増える</button>
+    <SharedCounter  :count="this.count" />
+    <button @click="btnIncrement">←増える</button>
+    <SharedCounter  :count="this.count" />
+    <button @click="btnIncrement">←増える</button>
 </template>
