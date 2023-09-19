@@ -5,7 +5,7 @@ import ArticleItem from '../components/ArticleItem.vue'
 export default {
   data() {
     return {
-      article: {
+      articles: {
         1: {
           id: 1,
           title: "タイトルだよ〜",
@@ -35,8 +35,7 @@ export default {
 <template>
     <div> home </div>
 
-  {{ console.log(this.article) }}
-    <div v-for="item in this.article">
+    <div v-for="item in this.articles">
       <ArticleItem :article="item" />
     </div>
 </template>
