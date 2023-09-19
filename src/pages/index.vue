@@ -1,5 +1,5 @@
 <script>
-import SharedCounter from '../components/SharedCounter.vue'
+import myBtnEvent from '../components/myBtnEvent.vue'
 export default {
   data() {
     return {
@@ -7,21 +7,18 @@ export default {
     }
   },
   components: {
-    SharedCounter
+    myBtnEvent
   },
   methods:{
-    btnIncrement () {
-      return this.count++
+    myEvent (mycount) {
+      console.log(mycount)
+      return this.count  = mycount
     }
   }
 }
 </script>
 <template>
     <div> home </div>
-    <SharedCounter  :count="this.count" />
-    <button @click="btnIncrement">←増える</button>
-    <SharedCounter  :count="this.count" />
-    <button @click="btnIncrement">←増える</button>
-    <SharedCounter  :count="this.count" />
-    <button @click="btnIncrement">←増える</button>
+    {{ this.count   }}<myBtnEvent :count=this.count @myEvent="myEvent"/>
+    {{ console.log(this.count) }}
 </template>
