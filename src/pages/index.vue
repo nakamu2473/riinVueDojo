@@ -1,5 +1,5 @@
 <script>
-import MyBtn from '../components/MyBtn.vue'
+import breakLineText from '../components/breakLineText.vue'
 import ArticleItem from '../components/ArticleItem.vue'
 
 export default {
@@ -15,7 +15,7 @@ export default {
         2: {
           id: 2,
           title: "タイトルだよ〜2",
-          text: "本文だよ〜2",
+          text: "本文だよ〜2本文だよ〜2\n本文だよ〜2本文だよ〜2本文だよ〜2本文だよ〜2",
           atuhor: "書いた人だよ〜2"
         },
         3: {
@@ -29,6 +29,7 @@ export default {
   },
   components: {
     ArticleItem,
+    breakLineText
   },
 }
 </script>
@@ -37,7 +38,7 @@ export default {
 
     <div v-for="item in this.articles">
       <ArticleItem :article="item">
-        {{ item.text }}
+        <breakLineText :text=item.text />
       </ArticleItem>
     </div>
 </template>
