@@ -13,7 +13,6 @@ export default {
 }
 </script>
 <template>
-
-    <div> <p v-html=this.wrappedText /></div>
+    <div> <p v-html=wrappedText /></div>
     
 </template>

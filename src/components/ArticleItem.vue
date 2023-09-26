@@ -11,8 +11,8 @@ export default {
 </script>
 <template>
     <h1>タイトル：{{ this.article.title }}</h1>
-    <div>本文： <slot></slot></div>
+    本文： <slot></slot>
        
-    <div>書いた人：{{ this.article.atuhor }}</div>
+    <div>書いた人：{{ this.article.author }}</div>
     <br>
 </template>
