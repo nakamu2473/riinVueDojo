@@ -9,7 +9,7 @@ export default {
         1: {
           id: 1,
           title: "タイトルだよ〜",
-          text: "本文だよ〜",
+          text: "本文だよ〜<h1>HTML！</h1>",
           atuhor: "書いた人だよ〜"
         },
         2: {
@@ -36,6 +36,8 @@ export default {
     <div> home </div>
 
     <div v-for="item in this.articles">
-      <ArticleItem :article="item" />
+      <ArticleItem :article="item">
+        {{ item.text }}
+      </ArticleItem>
     </div>
 </template>
