@@ -1,12 +1,27 @@
+<script>
+import MyBtnIncrement from '../components/MyBtnIncrement.vue'
+import MyBtnMisskey from '../components/MyBtnMisskey.vue'
+
+
+export default {
+  components: {
+    MyBtnIncrement,
+    MyBtnMisskey
+  },
+  data() {
+    return {
+    }
+  },
+}
+</script>
 <template>
     <div> abount </div>
-    <p>
-        <span>りん先生にvueを教わる道場だよ<br></span>
-        <span>vueはとてもたのしいよ<br></span>
-        <span>りん先生はとてもやさしいよ<br></span>
-        <span>vue.jsとはフロントエンドのフレームワークだよ<br></span>
-        <span>ゔぇのことだよ<br></span>
-    </p>
+    <div>
+        <MyBtnIncrement/><MyBtnIncrement/><MyBtnIncrement/>
+    </div>
+    <div>
+        <MyBtnMisskey/>
+    </div>
 </template>
 <style scoped>
 span {
