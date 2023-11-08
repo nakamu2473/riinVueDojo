@@ -16,8 +16,9 @@ export default {
 
     <div class="wrapper">
       <HelloWorld msg="りん先生のVue道場!!" />
-      <router-link to="/">home</router-link>
-      <router-link to="/about">about</router-link>
+      <router-link to="/">home</router-link>/
+      <router-link to="/about">about</router-link>/
+      <router-link to="/calculator">calculator</router-link>
     </div>
   </header>
 
