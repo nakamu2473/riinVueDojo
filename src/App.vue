@@ -12,14 +12,16 @@ export default {
 
 <template>
   <header>
-    <img alt="Riin Vue logo" class="logo" src="@/pic/RiinVue.png" width="525" height="525" />
+    <!-- <img alt="Riin Vue logo" class="logo" src="@/pic/RiinVue.png" width="525" height="525" /> -->
 
     <div class="wrapper">
-      <HelloWorld msg="りん先生のVue道場!!" />
+      <!-- <HelloWorld msg="りん先生のVue道場!!" /> -->
       <router-link to="/">home</router-link>/
       <router-link to="/about">about</router-link>/
       <router-link to="/calculator">calculator</router-link>/
-      <router-link to="/cssdev">cssdev</router-link>
+      <router-link to="/cssdev">cssdev</router-link>/
+      <router-link to="/cssdev2">cssdev2</router-link>/
+      <router-link to="/cssdev3">cssdev3</router-link>
     </div>
   </header>
 
